@@ -18,3 +18,7 @@ Write .gmt as .json:
 ```julia-repl
 pkg> add https://github.com/kwatme/GCTGMT.jl
 ```
+
+## Use
+
+See [notebook](notenook).
