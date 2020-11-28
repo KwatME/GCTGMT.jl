@@ -15,8 +15,10 @@ Write .gmt as .json:
 
 ## Install
 
-```julia-repl
-pkg> add https://github.com/kwatme/GCTGMT.jl
+```julia
+using Pkg: add
+
+add(url="https://github.com/kwatme/GCTGMT.jl")
 ```
 
 ## Use
