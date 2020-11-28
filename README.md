@@ -23,4 +23,4 @@ add(url="https://github.com/kwatme/GCTGMT.jl")
 
 ## Use
 
-See [notebook](notenook).
+See [notebook](notenook/).
