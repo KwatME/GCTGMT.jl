@@ -1,4 +1,4 @@
-## Module for accessing .GCT and .GMT
+## Access .GCT and .GMT
 
 No one should be writing .gct or .gmt anymore.
 
