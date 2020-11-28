@@ -23,4 +23,4 @@ add(url="https://github.com/kwatme/GCTGMT.jl")
 
 ## Use
 
-See [notebook](notebook/example.ipynb).
+See [examples](notebook/example.ipynb).
