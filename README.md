@@ -1,5 +1,3 @@
-## Access .GCT and .GMT
-
 No one should be writing .gct or .gmt anymore.
 
 Write .gct as .tsv.
@@ -18,7 +16,7 @@ Write .gmt as .json:
 ```julia
 using Pkg: add
 
-add(url="https://github.com/kwatme/GCTGMT.jl")
+add(url="https://github.com/KwatME/GCTGMT.jl")
 ```
 
 ## Use
