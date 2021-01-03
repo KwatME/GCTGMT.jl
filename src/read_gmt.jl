@@ -1,10 +1,6 @@
-String_ = Vector{String}
-
-Gmt = Dict{String, String_}
-
 function read_gmt(file_path::String)
 
-    gene_set_to_gene_ = Gmt()
+    gene_set_to_gene_ = Dict{String, Vector{String}}()
 
     for line in readlines(file_path)
 
@@ -22,9 +18,9 @@ function read_gmt(file_path::String)
 
 end
 
-function read_gmt(file_path_::String_)
+function read_gmt(file_path_::Vector{String})
 
-    gene_set_to_gene_all = Gmt()
+    gene_set_to_gene_all = Dict{String, Vector{String}}()
 
     for file_path in file_path_
 
