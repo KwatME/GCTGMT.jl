@@ -1,8 +1,8 @@
-function read_gmt(file_path::String)
+function read_gmt(path::String)::Dict{String, Vector{String}}
 
     gene_set_to_gene_ = Dict{String, Vector{String}}()
 
-    for line in readlines(file_path)
+    for line in readlines(path)
 
         split_ = split(line, '\t')
 
@@ -18,17 +18,17 @@ function read_gmt(file_path::String)
 
 end
 
-function read_gmt(file_path_::Vector{String})
+function read_gmt(path_::Vector{String})::Dict{String, Vector{String}}
 
-    gene_set_to_gene_all = Dict{String, Vector{String}}()
+    gene_set_to_gene_ = Dict{String, Vector{String}}()
 
-    for file_path in file_path_
+    for path in path_
 
-        merge!(gene_set_to_gene_all, read_gmt(file_path))
+        merge!(gene_set_to_gene_, read_gmt(path))
 
     end
 
-    return gene_set_to_gene_all
+    return gene_set_to_gene_
 
 end
 
