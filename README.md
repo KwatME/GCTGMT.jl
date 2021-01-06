@@ -13,6 +13,10 @@ Write .gmt as .json:
 
 ## Install
 
+```sh
+julia
+```
+
 ```julia
 using Pkg: add
 
