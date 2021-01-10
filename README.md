@@ -26,3 +26,5 @@ add(url="https://github.com/KwatME/GCTGMT.jl")
 ## Use
 
 See [examples](notebook/example.ipynb).
+
+### Check out the [python version](https://github.com/KwatME/GCTGMT.py).
