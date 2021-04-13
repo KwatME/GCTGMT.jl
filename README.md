@@ -1,4 +1,4 @@
-Module for reading .gct and .gmt.
+For reading .gct and .gmt.
 
 No one should be writing .gct or .gmt anymore.
 Write .gct as .tsv.
