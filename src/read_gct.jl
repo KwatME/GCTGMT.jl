@@ -1,25 +1,16 @@
 using CSV: File
-
-
 using DataFrames: DataFrame, Not, rename!, select!
 
+function read_gct(p::String; n::String = "Axis 0 Name")::DataFrame
 
-function read_gct(path::String; axis_0_name::String = "Axis 0 Name")::DataFrame
+    df = DataFrame(File(p; header = 3, delim = '\t'))
 
+    select!(df, Not(Symbol("Description")))
 
-    gene_x_sample = DataFrame(File(path; header = 3, delim = '\t'))
+    rename!(df, Symbol("Name") => Symbol(n))
 
-
-    select!(gene_x_sample, Not(Symbol("Description")))
-
-
-    rename!(gene_x_sample, Symbol("Name") => Symbol(axis_0_name))
-
-
-    return gene_x_sample
-
+    return df
 
 end
-
 
 export read_gct

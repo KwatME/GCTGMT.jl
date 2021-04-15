@@ -1,52 +1,29 @@
-function read_gmt(path::String)::Dict{String, Vector{String}}
+function read_gmt(p::String)::Dict{String, Vector{String}}
 
+    d = Dict{String, Vector{String}}()
 
-    gene_set_to_gene_ = Dict{String, Vector{String}}()
+    for l in readlines(p)
+        s_ = split(l, '\t')
 
-
-    for line in readlines(path)
-
-
-        split_ = split(line, '\t')
-
-
-        gene_set = split_[1]
-
-
-        gene_ = split_[3:end]
-
-
-        gene_set_to_gene_[gene_set] = gene_
-
+        d[s_[1]] = s_[3:end]
 
     end
 
-
-    return gene_set_to_gene_
-
+    return d
 
 end
 
+function read_gmt(p_::Vector{String})::Dict{String, Vector{String}}
 
-function read_gmt(path_::Vector{String})::Dict{String, Vector{String}}
+    d = Dict{String, Vector{String}}()
 
-
-    gene_set_to_gene_ = Dict{String, Vector{String}}()
-
-
-    for path in path_
-
-
-        merge!(gene_set_to_gene_, read_gmt(path))
-
+    for p in p_
+        merge!(d, read_gmt(p))
 
     end
 
-
-    return gene_set_to_gene_
-
+    return d
 
 end
-
 
 export read_gmt
