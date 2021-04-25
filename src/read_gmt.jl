@@ -6,7 +6,13 @@ function read_gmt(p::String)::Dict{String, Vector{String}}
 
         s_ = split(l, '\t')
 
-        d[s_[1]] = s_[3:end]
+        g_ = s_[3:end]
+
+        if unique(g_) != [""]
+
+            d[s_[1]] = g_
+
+        end
 
     end
 
