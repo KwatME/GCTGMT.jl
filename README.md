@@ -28,7 +28,3 @@ Write .gmt as .json:
   "Gene Set 2": ["Gene A", "Gene B", "Gene C"]
 }
 ```
-
----
-
-Check out the [python version](https://github.com/KwatME/GCTGMT.py).
