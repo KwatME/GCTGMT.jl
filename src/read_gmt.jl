@@ -1,8 +1,6 @@
-using OrderedCollections: OrderedDict
+function read_gmt(p::String)::Dict{String, Vector{String}}
 
-function read_gmt(p::String)::OrderedDict{String, Vector{String}}
-
-    d = OrderedDict{String, Vector{String}}()
+    d = Dict{String, Vector{String}}()
 
     for l in readlines(p)
 
@@ -18,13 +16,13 @@ function read_gmt(p::String)::OrderedDict{String, Vector{String}}
 
     end
 
-    return sort(d)
+    return d
 
 end
 
-function read_gmt(p_::Vector{String})::OrderedDict{String, Vector{String}}
+function read_gmt(p_::Vector{String})::Dict{String, Vector{String}}
 
-    d = OrderedDict{String, Vector{String}}()
+    d = Dict{String, Vector{String}}()
 
     for p in p_
 
@@ -32,7 +30,7 @@ function read_gmt(p_::Vector{String})::OrderedDict{String, Vector{String}}
 
     end
 
-    return sort(d)
+    return d
 
 end
 
