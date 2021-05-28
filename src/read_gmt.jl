@@ -1,6 +1,6 @@
-function read_gmt(p::String)::Dict{String, Vector{String}}
+function read_gmt(p::String)::Dict{String,Vector{String}}
 
-    d = Dict{String, Vector{String}}()
+    d = Dict{String,Vector{String}}()
 
     for l in readlines(p)
 
@@ -20,9 +20,9 @@ function read_gmt(p::String)::Dict{String, Vector{String}}
 
 end
 
-function read_gmt(p_::Vector{String})::Dict{String, Vector{String}}
+function read_gmt(p_::Vector{String})::Dict{String,Vector{String}}
 
-    d = Dict{String, Vector{String}}()
+    d = Dict{String,Vector{String}}()
 
     for p in p_
 
